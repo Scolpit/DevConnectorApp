@@ -50,4 +50,26 @@ router.post("/register", (req, res) => {
   });
 });
 
+// @route   POST api/users/login
+// @desc    Login user / return token
+// @access  Public
+router.post("/login", (req, res) => {
+  const email = req.body.email;
+  const password = req.body.password;
+
+  User.findOne({ email }).then(user => {
+    if (!user) {
+      return res.status(404).json({ email: "User not found" });
+    }
+
+    bcrypt.compare(password, user.password).then(isMatch => {
+      if (isMatch) {
+        res.json({ msg: "Success" });
+      } else {
+        return res.status(404).json({ password: "Invalid password" });
+      }
+    });
+  });
+});
+
 module.exports = router;
