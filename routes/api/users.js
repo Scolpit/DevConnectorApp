@@ -5,6 +5,7 @@ const gravatar = require("gravatar");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const configKeys = require("../../config/keys");
+const passport = require("passport");
 
 // @route   GET api/users/test
 // @desc    Test users route
@@ -72,7 +73,7 @@ router.post("/login", (req, res) => {
 
         jwt.sign(
           payload,
-          configKeys.secret,
+          configKeys.secretOrKey,
           { expiresIn: 3600 },
           (err, token) => {
             if (err) throw err;
@@ -88,5 +89,16 @@ router.post("/login", (req, res) => {
     });
   });
 });
+
+// @route   GET api/users/current
+// @desc    Return current user
+// @access  Private
+router.get(
+  "/current",
+  passport.authenticate("jwt", { session: false }),
+  (req, res) => {
+    res.json({ id: req.user.id, name: req.user.name, email: req.user.email });
+  }
+);
 
 module.exports = router;
