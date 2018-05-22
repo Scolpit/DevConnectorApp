@@ -9,6 +9,7 @@ const passport = require("passport");
 
 // Load input validation
 const validateRegisterInput = require("../../validation/register");
+const validateLoginInput = require("../../validation/login");
 
 // @route   GET api/users/test
 // @desc    Test users route
@@ -22,6 +23,7 @@ router.get("/test", (req, res) => {
 // @access  Public
 router.post("/register", (req, res) => {
   const { errors, isValid } = validateRegisterInput(req.body);
+
   if (!isValid) {
     return res.status(400).json({ errors });
   }
@@ -66,12 +68,20 @@ router.post("/register", (req, res) => {
 // @desc    Login user / return token
 // @access  Public
 router.post("/login", (req, res) => {
+  const { errors, isValid } = validateLoginInput(req.body);
+
+  if (!isValid) {
+    console.log(errors);
+    return res.status(400).json({ errors });
+  }
+
   const email = req.body.email;
   const password = req.body.password;
 
   User.findOne({ email }).then(user => {
     if (!user) {
-      return res.status(404).json({ email: "User not found" });
+      errors.email = "User not found";
+      return res.status(404).json({ errors });
     }
 
     bcrypt.compare(password, user.password).then(isMatch => {
@@ -93,7 +103,8 @@ router.post("/login", (req, res) => {
           }
         );
       } else {
-        return res.status(404).json({ password: "Invalid password" });
+        errors.password = "Invalid password";
+        return res.status(404).json({ errors });
       }
     });
   });
