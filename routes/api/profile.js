@@ -26,7 +26,7 @@ router.get(
       .then(profile => {
         if (!profile) {
           errors.noprofile = "Profile not found";
-          res.status(404).json({ errors });
+          return res.status(404).json(errors);
         }
         res.json(profile);
       })
