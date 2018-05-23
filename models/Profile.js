@@ -41,7 +41,7 @@ const ProfileSchema = new Schema({
     linkedin: { type: String },
     instagram: { type: String }
   },
-  date: { type: Data, default: Date.now }
+  date: { type: Date, default: Date.now }
 });
 
 module.exports = Profile = mongoose.model("profile", ProfileSchema);
