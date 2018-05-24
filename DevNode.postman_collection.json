@@ -46,7 +46,7 @@
 			},
 			"response": [
 				{
-					"id": "fad9e6d1-df3f-4f65-87fe-fbd242d62aeb",
+					"id": "9a57f487-1ab2-4fd0-90cc-3f8731bd4963",
 					"name": "Nuno Morgado",
 					"originalRequest": {
 						"method": "POST",
@@ -125,7 +125,7 @@
 					"body": "{\"success\":true,\"token\":\"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMDMxM2IyMjE2MTNjMGY3YzllNzA5ZiIsIm5hbWUiOiJOdW5vIE1vcmdhZG8iLCJhdmF0YXIiOiIvL3d3dy5ncmF2YXRhci5jb20vYXZhdGFyLzkyMzU2ZWM1M2UyNjhiNDNjMjllMGQ5M2NkZWRhY2UxP3M9MjAwJnI9cGcmZD1tbSIsImlhdCI6MTUyNzE2NTEwMiwiZXhwIjoxNTI3MTY4NzAyfQ.KIzNLusYitv53WwOMSZQmPJ5JamTVygMK-LPBK6Zgbs\"}"
 				},
 				{
-					"id": "24867fc6-0cb2-4afa-92bc-dd0cd8629560",
+					"id": "3c32d9b3-85cf-43aa-9523-7060af50173c",
 					"name": "John Dow",
 					"originalRequest": {
 						"method": "POST",
@@ -692,6 +692,182 @@
 						"api",
 						"profile",
 						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Post (P)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "text",
+							"value": "this is another test post",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/posts/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"posts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Senior Developer7",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "company",
+							"value": "It Solutions",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "from",
+							"value": "2010-04-20",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "to",
+							"value": "2011-09-10",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "my description here",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/posts/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"posts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Post by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Senior Developer7",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "company",
+							"value": "It Solutions",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "from",
+							"value": "2010-04-20",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "to",
+							"value": "2011-09-10",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "my description here",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/posts/5b0719602636930b44a72e63",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"posts",
+						"5b0719602636930b44a72e63"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Post by id (P)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/api/posts/5b071fbe02e7d828e86723a1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"posts",
+						"5b071fbe02e7d828e86723a1"
 					]
 				}
 			},
