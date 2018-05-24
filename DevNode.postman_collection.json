@@ -46,7 +46,133 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"id": "5031a137-8037-4f31-b3f1-80ce6fbe523f",
+					"name": "John Dow",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "scolpit5@gmail.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"id": "a6201d90-85cd-4dae-8ecc-20d044ea6130",
+					"name": "Nuno Morgado",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "scolpit@gmail.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "349",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 24 May 2018 12:31:42 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"15d-akm91WsO5RWUHr+lvgKNJsFP7jU\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"body": "{\"success\":true,\"token\":\"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMDMxM2IyMjE2MTNjMGY3YzllNzA5ZiIsIm5hbWUiOiJOdW5vIE1vcmdhZG8iLCJhdmF0YXIiOiIvL3d3dy5ncmF2YXRhci5jb20vYXZhdGFyLzkyMzU2ZWM1M2UyNjhiNDNjMjllMGQ5M2NkZWRhY2UxP3M9MjAwJnI9cGcmZD1tbSIsImlhdCI6MTUyNzE2NTEwMiwiZXhwIjoxNTI3MTY4NzAyfQ.KIzNLusYitv53WwOMSZQmPJ5JamTVygMK-LPBK6Zgbs\"}"
+				}
+			]
 		},
 		{
 			"name": "Register User",
@@ -62,21 +188,33 @@
 					"mode": "urlencoded",
 					"urlencoded": [
 						{
+							"key": "name",
+							"value": "John Doe",
+							"description": "",
+							"type": "text"
+						},
+						{
 							"key": "email",
-							"value": "scolpit@gmail.com",
+							"value": "scolpit5@gmail.com",
 							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "password",
-							"value": "1234",
+							"value": "12345678",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password2",
+							"value": "12345678",
 							"description": "",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/users/login",
+					"raw": "http://localhost:3000/api/users/register",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -85,20 +223,20 @@
 					"path": [
 						"api",
 						"users",
-						"login"
+						"register"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Get current user",
+			"name": "Get current user (P)",
 			"request": {
-				"method": "POST",
+				"method": "GET",
 				"header": [
 					{
-						"key": "Content-Type",
-						"value": "application/x-www-form-urlencoded"
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMDMxM2IyMjE2MTNjMGY3YzllNzA5ZiIsIm5hbWUiOiJOdW5vIE1vcmdhZG8iLCJhdmF0YXIiOiIvL3d3dy5ncmF2YXRhci5jb20vYXZhdGFyLzkyMzU2ZWM1M2UyNjhiNDNjMjllMGQ5M2NkZWRhY2UxP3M9MjAwJnI9cGcmZD1tbSIsImlhdCI6MTUyNzE2NDg1MywiZXhwIjoxNTI3MTY4NDUzfQ.gdi3ETLt85-VFLn5eVfJyAPXeEA0I435bLAFt-psXdw"
 					}
 				],
 				"body": {
@@ -119,7 +257,7 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/users/login",
+					"raw": "http://localhost:3000/api/users/current",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -128,20 +266,20 @@
 					"path": [
 						"api",
 						"users",
-						"login"
+						"current"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Get current profile",
+			"name": "Get current profile (P)",
 			"request": {
-				"method": "POST",
+				"method": "GET",
 				"header": [
 					{
-						"key": "Content-Type",
-						"value": "application/x-www-form-urlencoded"
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMDMxM2IyMjE2MTNjMGY3YzllNzA5ZiIsIm5hbWUiOiJOdW5vIE1vcmdhZG8iLCJhdmF0YXIiOiIvL3d3dy5ncmF2YXRhci5jb20vYXZhdGFyLzkyMzU2ZWM1M2UyNjhiNDNjMjllMGQ5M2NkZWRhY2UxP3M9MjAwJnI9cGcmZD1tbSIsImlhdCI6MTUyNzE2NDg1MywiZXhwIjoxNTI3MTY4NDUzfQ.gdi3ETLt85-VFLn5eVfJyAPXeEA0I435bLAFt-psXdw"
 					}
 				],
 				"body": {
@@ -162,7 +300,7 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/users/login",
+					"raw": "http://localhost:3000/api/profile",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -170,8 +308,208 @@
 					"port": "3000",
 					"path": [
 						"api",
-						"users",
-						"login"
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all profiles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "scolpit@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/profile/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"profile",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get profile by handle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "scolpit@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/profile/handle/scolpit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"profile",
+						"handle",
+						"scolpit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get profile by user id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "scolpit@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/profile/user/5b0313b221613c0f7c9e709f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"profile",
+						"user",
+						"5b0313b221613c0f7c9e709f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create or edit profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMDMxM2IyMjE2MTNjMGY3YzllNzA5ZiIsIm5hbWUiOiJOdW5vIE1vcmdhZG8iLCJhdmF0YXIiOiIvL3d3dy5ncmF2YXRhci5jb20vYXZhdGFyLzkyMzU2ZWM1M2UyNjhiNDNjMjllMGQ5M2NkZWRhY2UxP3M9MjAwJnI9cGcmZD1tbSIsImlhdCI6MTUyNzE2NTM2NiwiZXhwIjoxNTI3MTY4OTY2fQ._RF22Pbr4ZNKAaugz4fPC6MUPmnQjYKibiVKa70f6jA"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "handle",
+							"value": "scolpit2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "Developer",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "skills",
+							"value": "javascript,php,nodejs,html",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "company",
+							"value": "darwinlabs",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "bio",
+							"value": "hello world",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "website",
+							"value": "http://www.mywebsite.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "youtube",
+							"value": "www.youtube.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "linkedin",
+							"value": "www.linkedin.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "instagram",
+							"value": "www.instagram.com",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/profile/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"profile",
+						""
 					]
 				}
 			},
