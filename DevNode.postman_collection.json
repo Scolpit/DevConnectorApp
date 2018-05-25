@@ -46,7 +46,7 @@
 			},
 			"response": [
 				{
-					"id": "75524dd8-651c-478d-bbe4-cfa0fa18f5a0",
+					"id": "e2e44bb3-2c99-49cc-926a-b65a1f0c189b",
 					"name": "John Dow",
 					"originalRequest": {
 						"method": "POST",
@@ -88,7 +88,7 @@
 					"body": ""
 				},
 				{
-					"id": "9dd5e282-5ed7-4af3-bee3-6746a873ff27",
+					"id": "3b7fa2c9-e37e-40a5-a8ac-cb51014ab8f8",
 					"name": "Nuno Morgado",
 					"originalRequest": {
 						"method": "POST",
@@ -919,6 +919,48 @@
 						"api",
 						"posts",
 						"unlike",
+						"5b0718ec2636930b44a72e62"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comment post (P)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "text",
+							"value": "m",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/posts/comment/5b0718ec2636930b44a72e62",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"posts",
+						"comment",
 						"5b0718ec2636930b44a72e62"
 					]
 				}
