@@ -80,9 +80,13 @@ router.post(
   (req, res) => {
     Post.findById(req.params.id)
       .then(post => {
+        myLikeArray = post.likes.filter(
+          like => like.user.toString() === req.user.id
+        );
+
         if (
           post.likes.filter(like => like.user.toString() === req.user.id)
-            .lenght > 0
+            .length > 0
         ) {
           return res
             .status(400)
@@ -107,7 +111,7 @@ router.post(
       .then(post => {
         if (
           post.likes.filter(like => like.user.toString() === req.user.id)
-            .lenght === 0
+            .length === 0
         ) {
           return res
             .status(400)
