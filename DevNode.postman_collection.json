@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "e9f15a4c-7f8d-4973-9c92-24746fae8c1f",
+		"_postman_id": "08d35c92-1dd0-4f4f-907d-d2421c25ed91",
 		"name": "DevNode",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -31,12 +31,11 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/users/login",
+					"raw": "http://{{url}}/api/users/login",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"users",
@@ -46,7 +45,7 @@
 			},
 			"response": [
 				{
-					"id": "5d929966-2b7f-427c-898b-766a92bf03d4",
+					"id": "c89666a5-4d34-4be0-9fa3-21f0ee15a39f",
 					"name": "John Dow",
 					"originalRequest": {
 						"method": "POST",
@@ -88,7 +87,7 @@
 					"body": ""
 				},
 				{
-					"id": "73d4ec4d-a8b8-4ef3-8e51-81fa8b6498a0",
+					"id": "09806d29-2e36-4b97-a552-e5fec5be0e9a",
 					"name": "Nuno Morgado",
 					"originalRequest": {
 						"method": "POST",
@@ -204,12 +203,11 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/users/register",
+					"raw": "http://{{url}}/api/users/register",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"users",
@@ -245,12 +243,11 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/users/current",
+					"raw": "http://{{url}}/api/users/current",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"users",
@@ -286,12 +283,11 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/profile",
+					"raw": "http://{{url}}/api/profile",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"profile"
@@ -321,12 +317,11 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/profile/all",
+					"raw": "http://{{url}}/api/profile/all",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"profile",
@@ -357,12 +352,11 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/profile/handle/scolpit",
+					"raw": "http://{{url}}/api/profile/handle/scolpit",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"profile",
@@ -394,12 +388,11 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/profile/user/5b0313b221613c0f7c9e709f",
+					"raw": "http://{{url}}/api/profile/user/5b0313b221613c0f7c9e709f",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"profile",
@@ -471,12 +464,11 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/profile/",
+					"raw": "http://{{url}}/api/profile/",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"profile",
@@ -527,12 +519,11 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/profile/experience",
+					"raw": "http://{{url}}/api/profile/experience",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"profile",
@@ -588,12 +579,11 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/profile/education",
+					"raw": "http://{{url}}/api/profile/education",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"profile",
@@ -618,12 +608,11 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/profile/experience/5b070a0bd4bcc41a1834d555",
+					"raw": "http://{{url}}/api/profile/experience/5b070a0bd4bcc41a1834d555",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"profile",
@@ -649,12 +638,11 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/profile/education/5b070b4c8dd09319101fe288",
+					"raw": "http://{{url}}/api/profile/education/5b070b4c8dd09319101fe288",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"profile",
@@ -680,12 +668,11 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/profile/",
+					"raw": "http://{{url}}/api/profile/",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"profile",
@@ -716,12 +703,11 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/posts/",
+					"raw": "http://{{url}}/api/posts/",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"posts",
@@ -767,12 +753,11 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/posts/",
+					"raw": "http://{{url}}/api/posts/",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"posts",
@@ -818,12 +803,11 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/posts/5b0719602636930b44a72e63",
+					"raw": "http://{{url}}/api/posts/5b0719602636930b44a72e63",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"posts",
@@ -848,12 +832,11 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/posts/5b071fbe02e7d828e86723a1",
+					"raw": "http://{{url}}/api/posts/5b071fbe02e7d828e86723a1",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"posts",
@@ -878,12 +861,11 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/posts/like/5b0718ec2636930b44a72e62",
+					"raw": "http://{{url}}/api/posts/like/5b0718ec2636930b44a72e62",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"posts",
@@ -909,12 +891,11 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/posts/unlike/5b0718ec2636930b44a72e62",
+					"raw": "http://{{url}}/api/posts/unlike/5b0718ec2636930b44a72e62",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"posts",
@@ -945,18 +926,16 @@
 						{
 							"key": "text",
 							"value": "m",
-							"description": "",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/posts/comment/5b0718ec2636930b44a72e62",
+					"raw": "http://{{url}}/api/posts/comment/5b0718ec2636930b44a72e62",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"posts",
@@ -977,14 +956,16 @@
 						"value": "{{token}}"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
-					"raw": "http://localhost:3000/api/posts/comment/5b0718ec2636930b44a72e62/5b08170d5c67121f683af44f",
+					"raw": "http://{{url}}/api/posts/comment/5b0718ec2636930b44a72e62/5b08170d5c67121f683af44f",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"posts",
