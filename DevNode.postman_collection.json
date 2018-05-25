@@ -46,7 +46,7 @@
 			},
 			"response": [
 				{
-					"id": "e2e44bb3-2c99-49cc-926a-b65a1f0c189b",
+					"id": "5d929966-2b7f-427c-898b-766a92bf03d4",
 					"name": "John Dow",
 					"originalRequest": {
 						"method": "POST",
@@ -88,7 +88,7 @@
 					"body": ""
 				},
 				{
-					"id": "3b7fa2c9-e37e-40a5-a8ac-cb51014ab8f8",
+					"id": "73d4ec4d-a8b8-4ef3-8e51-81fa8b6498a0",
 					"name": "Nuno Morgado",
 					"originalRequest": {
 						"method": "POST",
@@ -962,6 +962,35 @@
 						"posts",
 						"comment",
 						"5b0718ec2636930b44a72e62"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete comment (P)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/api/posts/comment/5b0718ec2636930b44a72e62/5b08170d5c67121f683af44f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"posts",
+						"comment",
+						"5b0718ec2636930b44a72e62",
+						"5b08170d5c67121f683af44f"
 					]
 				}
 			},

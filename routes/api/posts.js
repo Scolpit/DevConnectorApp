@@ -159,4 +159,36 @@ router.post(
   }
 );
 
+// @route   DELETE api/posts/comment/:post_id/:id
+// @desc    Delete comment
+// @access  Private
+router.delete(
+  "/comment/:post_id/:id",
+  passport.authenticate("jwt", { session: false }),
+  (req, res) => {
+    Post.findById(req.params.post_id)
+      .then(post => {
+        const indexOfComment = post.comments
+          .map(item => item._id.toString())
+          .indexOf(req.params.id);
+
+        if (
+          indexOfComment == -1 ||
+          post.comments[indexOfComment].user.toString() !== req.user.id
+        )
+          return res
+            .status(404)
+            .json({ commentnotexists: "Comment not found" });
+
+        post.comments.splice(indexOfComment, 1);
+
+        post
+          .save()
+          .then(post => res.json(post))
+          .catch(err => res.status(404).json(err));
+      })
+      .catch(err => res.status(404).json({ postnotfound: "Post not found" }));
+  }
+);
+
 module.exports = router;
