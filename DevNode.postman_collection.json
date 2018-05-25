@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "b3dc63ba-b3e8-4ad7-8861-0ecbb3aff9bb",
+		"_postman_id": "e9f15a4c-7f8d-4973-9c92-24746fae8c1f",
 		"name": "DevNode",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -46,7 +46,49 @@
 			},
 			"response": [
 				{
-					"id": "9a57f487-1ab2-4fd0-90cc-3f8731bd4963",
+					"id": "75524dd8-651c-478d-bbe4-cfa0fa18f5a0",
+					"name": "John Dow",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "scolpit5@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"id": "9dd5e282-5ed7-4af3-bee3-6746a873ff27",
 					"name": "Nuno Morgado",
 					"originalRequest": {
 						"method": "POST",
@@ -123,48 +165,6 @@
 					],
 					"cookie": [],
 					"body": "{\"success\":true,\"token\":\"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViMDMxM2IyMjE2MTNjMGY3YzllNzA5ZiIsIm5hbWUiOiJOdW5vIE1vcmdhZG8iLCJhdmF0YXIiOiIvL3d3dy5ncmF2YXRhci5jb20vYXZhdGFyLzkyMzU2ZWM1M2UyNjhiNDNjMjllMGQ5M2NkZWRhY2UxP3M9MjAwJnI9cGcmZD1tbSIsImlhdCI6MTUyNzE2NTEwMiwiZXhwIjoxNTI3MTY4NzAyfQ.KIzNLusYitv53WwOMSZQmPJ5JamTVygMK-LPBK6Zgbs\"}"
-				},
-				{
-					"id": "3c32d9b3-85cf-43aa-9523-7060af50173c",
-					"name": "John Dow",
-					"originalRequest": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "email",
-									"value": "scolpit5@gmail.com",
-									"type": "text"
-								},
-								{
-									"key": "password",
-									"value": "12345678",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/users/login",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"users",
-								"login"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "Text",
-					"header": [],
-					"cookie": [],
-					"body": ""
 				}
 			]
 		},
@@ -502,31 +502,26 @@
 						{
 							"key": "title",
 							"value": "Senior Developer7",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "company",
 							"value": "It Solutions",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "from",
 							"value": "2010-04-20",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "to",
 							"value": "2011-09-10",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "description",
 							"value": "my description here",
-							"description": "",
 							"type": "text"
 						}
 					]
@@ -563,37 +558,31 @@
 						{
 							"key": "from",
 							"value": "2013-04-20",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "to",
 							"value": "2014-09-10",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "description",
 							"value": "my description here",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "school",
 							"value": "bento rodrigues",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "degree",
 							"value": "engineer",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "fieldofstudy",
 							"value": "backend",
-							"description": "",
 							"type": "text"
 						}
 					]
@@ -624,7 +613,10 @@
 						"value": "{{token}}"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "http://localhost:3000/api/profile/experience/5b070a0bd4bcc41a1834d555",
 					"protocol": "http",
@@ -652,7 +644,10 @@
 						"value": "{{token}}"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "http://localhost:3000/api/profile/education/5b070b4c8dd09319101fe288",
 					"protocol": "http",
@@ -680,7 +675,10 @@
 						"value": "{{token}}"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "http://localhost:3000/api/profile/",
 					"protocol": "http",
@@ -713,7 +711,6 @@
 						{
 							"key": "text",
 							"value": "this is another test post",
-							"description": "",
 							"type": "text"
 						}
 					]
@@ -745,31 +742,26 @@
 						{
 							"key": "title",
 							"value": "Senior Developer7",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "company",
 							"value": "It Solutions",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "from",
 							"value": "2010-04-20",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "to",
 							"value": "2011-09-10",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "description",
 							"value": "my description here",
-							"description": "",
 							"type": "text"
 						}
 					]
@@ -801,31 +793,26 @@
 						{
 							"key": "title",
 							"value": "Senior Developer7",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "company",
 							"value": "It Solutions",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "from",
 							"value": "2010-04-20",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "to",
 							"value": "2011-09-10",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "description",
 							"value": "my description here",
-							"description": "",
 							"type": "text"
 						}
 					]
@@ -856,7 +843,10 @@
 						"value": "{{token}}"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "http://localhost:3000/api/posts/5b071fbe02e7d828e86723a1",
 					"protocol": "http",
@@ -868,6 +858,68 @@
 						"api",
 						"posts",
 						"5b071fbe02e7d828e86723a1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Like post (P)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/posts/like/5b0718ec2636930b44a72e62",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"posts",
+						"like",
+						"5b0718ec2636930b44a72e62"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unlike post (P)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/posts/unlike/5b0718ec2636930b44a72e62",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"posts",
+						"unlike",
+						"5b0718ec2636930b44a72e62"
 					]
 				}
 			},
