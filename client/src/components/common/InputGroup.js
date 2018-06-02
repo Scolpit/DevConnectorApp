@@ -2,19 +2,25 @@ import React from "react";
 import classnames from "classnames";
 import PropTypes from "prop-types";
 
-const TextFieldGroup = ({
+const InputGroup = ({
   name,
   placeholder,
   value,
   label,
   error,
   info,
+  icon,
   type,
   onChange,
   disabled
 }) => {
   return (
-    <div className="form-group">
+    <div className="input-group mb-3">
+      <div className="input-group-prepend">
+        <span className="input-group-text">
+          <i className={icon} />
+        </span>
+      </div>
       <input
         type={type}
         className={classnames("form-control form-control-lg", {
@@ -32,20 +38,21 @@ const TextFieldGroup = ({
   );
 };
 
-TextFieldGroup.propTypes = {
+InputGroup.propTypes = {
   name: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
   value: PropTypes.string.isRequired,
   label: PropTypes.string,
   error: PropTypes.string,
   info: PropTypes.string,
+  icon: PropTypes.string,
   type: PropTypes.string.isRequired,
   onChange: PropTypes.string.isRequired,
   disabled: PropTypes.string
 };
 
-TextFieldGroup.defaultProps = {
+InputGroup.defaultProps = {
   type: "text"
 };
 
-export default TextFieldGroup;
+export default InputGroup;
