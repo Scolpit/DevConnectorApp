@@ -8,7 +8,6 @@ import { addExperience } from "../../actions/profileActions";
 
 class AddExperience extends Component {
   constructor(props) {
-    console.log("it entered on constructor");
     super(props);
     this.state = {
       company: "",
@@ -95,7 +94,7 @@ class AddExperience extends Component {
                 <TextFieldGroup
                   placeholder="Location"
                   name="location"
-                  value={this.state.value}
+                  value={this.state.location}
                   error={errors.location}
                   onChange={this.onChange}
                 />
@@ -126,7 +125,7 @@ class AddExperience extends Component {
                     checked={this.state.current}
                     id="current"
                   />
-                  <label className="form-check-label" htmlfor="current">
+                  <label className="form-check-label" htmlFor="current">
                     Current Job
                   </label>
                 </div>
