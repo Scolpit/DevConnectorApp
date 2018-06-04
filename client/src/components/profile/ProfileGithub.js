@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 export class ProfileGithub extends Component {
-  static propTypes = {};
+  static propTypes = {
+    username: PropTypes.string.isRequired
+  };
 
   render() {
     return (
