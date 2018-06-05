@@ -58,6 +58,7 @@ class ProfileGithub extends Component {
         </div>
       </div>
     ));
+
     return (
       <div ref="myRef">
         <hr />

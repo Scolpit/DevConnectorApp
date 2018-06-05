@@ -36,7 +36,7 @@ export class ProfileCreds extends Component {
     ));
 
     const eduItem = education.map((education, index) => (
-      <li className="list-group-item">
+      <li key={index} className="list-group-item">
         <h4>{education.school}</h4>
         <p>
           {" "}
