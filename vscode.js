@@ -19,3 +19,4 @@
 // - Live Server
 // - Node.js Modules Intellisense
 // - Prettier - Code formatter
+// - Material icon theme
