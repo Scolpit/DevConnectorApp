@@ -5,6 +5,7 @@ import Spinner from "../common/Spinner";
 import { getPost } from "../../actions/postActions";
 import PostItem from "../posts/PostItem";
 import Link from "react-router-dom/Link";
+import CommentForm from "./CommentForm";
 
 export class Post extends Component {
   static propTypes = {
@@ -32,27 +33,8 @@ export class Post extends Component {
                   Back to feed
                 </Link>
                 <PostItem post={post} showActions={false} />
+                <CommentForm postId={post._id} />
 
-                <div className="post-form mb-3">
-                  <div className="card card-info">
-                    <div className="card-header bg-info text-white">
-                      Say Somthing...
-                    </div>
-                    <div className="card-body">
-                      <form>
-                        <div className="form-group">
-                          <textarea
-                            className="form-control form-control-lg"
-                            placeholder="Create a post"
-                          />
-                        </div>
-                        <button type="submit" className="btn btn-dark">
-                          Submit
-                        </button>
-                      </form>
-                    </div>
-                  </div>
-                </div>
                 {/* <!-- Comment Feed --> */}
                 <div className="comments">
                   {/* <!-- Comment Item --> */}
